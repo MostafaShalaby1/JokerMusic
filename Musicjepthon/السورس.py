@@ -29,7 +29,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(filters.command(["بنك"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["بنك", "بنج"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
     await m.delete()
     start = time()
@@ -44,7 +44,7 @@ async def ping(client, m: Message):
 
 
 @Client.on_message(
-    filters.user(SUDO_USERS) & filters.command(["اعادة تشغيل"], prefixes=f"{HNDLR}")
+    filters.user(SUDO_USERS) & filters.command(["اعادة تشغيل", "رستر"], prefixes=f"{HNDLR}")
 )
 async def restart(client, m: Message):
     await m.delete()
@@ -57,7 +57,7 @@ async def restart(client, m: Message):
     await jepthon.edit("7")
     await jepthon.edit("8")
     await jepthon.edit("9")
-    await jepthon.edit("**تم اعادة تشغيل سورس ابن الدورة ميوزك بنجاح ✓**")
+    await jepthon.edit("**تم اعادة تشغيل سورس ديشأأ أللمفيأأ ميوزك بنجاح ✓**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
@@ -83,8 +83,8 @@ async def help(client, m: Message):
 ———————×———————
 ⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
-المطور 💻 : @lMl10l
-القناة 🎈 : @jepthon
+المطور 💻 : @DeshaXBlacck
+القناة 🎈 : @W_II_Y
 """
     await m.reply(JEPM)
 
