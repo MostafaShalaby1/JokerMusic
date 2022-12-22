@@ -7,7 +7,7 @@ from Musicjepthon.helpers.handlers import skip_current_song, skip_item
 from Musicjepthon.helpers.queues import QUEUE, clear_queue
 
 
-@Client.on_message(filters.command(["تخطي"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["تخطي", "هات اللي بعدو"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def skip(client, m: Message):
     await m.delete()
